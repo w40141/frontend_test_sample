@@ -20,6 +20,7 @@ parserOptions:
   sourceType: 'module'
   project:
     - './tsconfig.json'
+    - './next.config.js'
   tsconfigRootDir: '.'
 plugins:
   - react
@@ -43,6 +44,12 @@ rules:
   no-void:
     - 'error'
     - allowAsStatement: true
+  react/no-unknown-property:
+    - 2
+    -
+      ignore:
+        - "jsx"
+
 settings:
   import/resolver:
     node:
