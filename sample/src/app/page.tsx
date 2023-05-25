@@ -1,8 +1,11 @@
 import Image from "next/image";
 
 import styles from "./page.module.css";
+import { StyledButton } from "./components/StyledButton";
+import { createContext } from "react";
 
 export default function Home(): JSX.Element {
+  const Context = createContext();
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -29,6 +32,7 @@ export default function Home(): JSX.Element {
         </div>
       </div>
 
+      <StyledButton variant="success" />
       <div className={styles.center}>
         <Image
           className={styles.logo}
